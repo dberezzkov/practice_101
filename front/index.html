@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='search.js'></script>
+    <script src='sort.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>
+                Country name
+            </th>
+            <th>
+                Average Salary
+            </th>
+            <th>
+                Median Salary
+            </th>
+            <th>
+                Inflation Rate
+            </th>
+            <th>
+                Yearly Cost of Living
+            </th>
+            <th>
+                Cost of Yearly helthcare
+            </th>
+        </thead>
+        <tbody>
+            {{range .Info}}
+            <tr>
+                <td> {{.Name}}</td>
+                <td> {{.Average}}</td>
+                <td> {{.Median}}</td>
+                <td> {{.Inflation}}</td>
+                <td> {{.Costofliving}}</td>
+                <td> {{.Healthcare}}</td>
+            </tr>
+            {{end}}
+
+            
+        </tbody>
+    </table>
+</body>
+</html>
